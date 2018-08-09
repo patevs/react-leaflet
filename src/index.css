@@ -1,0 +1,28 @@
+
+/* Index Css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  
+  /*width: auto !important; Firefox will set width as auto */
+}
+
+/* Loading Bar CSS */
+
+.LoadingBar {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.ldBar {
+  width: 400px;
+  height: 400px;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 400px;
+}

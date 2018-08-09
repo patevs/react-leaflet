@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>M8Fr8</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FOR MOBILE
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  -->
+
+  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+  <!-- Bootstrap 3 minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- JQuery JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- loading-bar CSS and JS-->
+  <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
+
+  <!-- Leaflet CSS and JS -->
+  <link href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" rel="stylesheet" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+
+  <!-- Leaflet Providers JS -->
+  <script src="js/leaflet-providers.js"></script>
+
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- react-leaflet JS -->
+  <!--
+  <script src="https://unpkg.com/react-leaflet/dist/react-leaflet.min.js"></script>
+  -->
+  
+</head>
+<body>
+<div 
+  id="loading-bar"
+  class="ldBar label-center" 
+  data-value="10"
+  data-preset="circle"
+></div>
+<div id="jumbo"></div>
+<div id="main-nav"></div>
+<div id="mapbox">
+  <div id="mapid" style="width: 420px; height: 720px; margin: 0 auto; margin-bottom: 1em; border: 2px solid black"></div>
+</div>
+<script>
+
+  /* LEAFLET MAP */
+
+  // base coordinates
+  var base_lat  = -42;
+  var base_long = 174;
+  // base zoom level
+  var base_zoom = 14;
+  // leaflet map
+  var lmap = L.map('mapid').setView([base_lat, base_long], base_zoom);
+
+  /* Deafult leaflet map (mapbox)
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox.streets'
+  }).addTo(lmap);
+  */
+
+  // HERE Normal Day map
+  L.tileLayer.provider('HERE.normalDay', {
+      app_id: '',
+      app_code: ''
+  }).addTo(lmap);
+
+  // attempt to locate user
+  lmap.locate({setView: true, maxZoom: 16});
+  // user is successfully located event
+  function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+    L.marker(e.latlng).addTo(lmap)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(lmap);
+  }
+  lmap.on('locationfound', onLocationFound);
+  // user cannot be located event
+  function onLocationError(e) {
+    alert(e.message);
+  }
+  lmap.on('locationerror', onLocationError);
+
+  // user clicks on map event
+  function onMapClick(e) {
+    popup
+      .setLatLng(e.latlng)
+      .setContent("You clicked the map at " + e.latlng.toString())
+      .openOn(lmap);
+  }
+  lmap.on('click', onMapClick);
+
+  // get elements
+  var jumboElem = document.getElementById("jumbo");
+  var navbarElem = document.getElementById("main-nav");
+  var mapBoxElem = document.getElementById("mapbox");
+
+  // choose to display page content
+  function displayContent(boolean){
+    if(boolean == true){
+      jumboElem.setAttribute("style", "");
+      navbarElem.setAttribute("style", "");
+      mapBoxElem.setAttribute("style", "");
+      lmap.invalidateSize();
+    } else {
+      jumboElem.setAttribute("style", "display:none");
+      navbarElem.setAttribute("style", "display:none");
+      mapBoxElem.setAttribute("style", "opacity: 0;");
+    }
+  }
+  displayContent(false);
+
+  /* LOADING BAR */
+
+  // get the loading bar element
+  var barElem = document.getElementById("loading-bar");
+  var bar = new ldBar(".ldBar");
+  setTimeout(function(){
+    bar.set(100);
+  }, 1000);
+  setTimeout(function(){
+    barElem.parentNode.removeChild(barElem);
+    //barElem.outerHTML = "";
+  }, 3000);
+  setTimeout(function(){
+    displayContent(true);
+  }, 4000);
+
+    /* BLUE TRIANGLE
+  var delivery_popup = "<b><span style=\"color:blue;\">Blue</span></b> triangle is<br /> the delivery zone";
+  L.polygon([
+    [base_lat,         base_long + 0.01],
+    [base_lat + 0.011, base_long - 0.01],
+    [base_lat - 0.021, base_long - 0.01]
+  ], {
+    color: 'blue',
+    fillColor: '#ADD8E6',
+    fillOpacity: 0.4
+  }).addTo(lmap).bindPopup(delivery_popup);  
+
+  // GREEN CIRCLE
+  var pickup_popup = "<b><span style=\"color:green;\">Green</span></b> circle is<br /> the pickup zone";
+  L.circle([base_lat - 0.0005, base_long - 0.001], 500, {
+    color: 'green',
+    fillColor: '#32CD32',
+    fillOpacity: 0.2
+  }).addTo(lmap).bindPopup(pickup_popup);
+  
+  // DEFAULT MARKER/POPUP
+  var marker_popup = 
+  "<h5><b>Hello there, you are here!</b></h5><u><span>Key/Legend:</span></u><ul><li><b><span style=\"color:green;\">Green Circle</span></b> : Pickup Zone</li><li><b><span style=\"color:blue;\">Blue Triangle</span></b> : Delivery Zone</li></ul>";
+  L.marker([base_lat, base_long]).addTo(lmap)
+    .bindPopup(marker_popup);
+
+  var popup = L.popup();
+  */
+
+</script>
+</body>
+</html>

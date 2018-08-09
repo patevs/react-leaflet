@@ -1,0 +1,16 @@
+.Jumbo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#tron {
+  background: #D5D1D6;
+  margin-bottom: -1.75em;
+  margin-top: -2.75em;
+}
+
+@media(max-width:510px){
+	#tron > img {
+	  display: none;
+	}
+}
