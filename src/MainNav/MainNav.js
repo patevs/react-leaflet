@@ -9,6 +9,7 @@ class MainNav extends Component {
   render() {
     return (
       <div className="MainNav">
+      
 		<Navbar inverse collapseOnSelect>
 		  <Navbar.Header>
 		    <Navbar.Brand>

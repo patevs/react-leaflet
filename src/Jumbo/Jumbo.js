@@ -9,7 +9,7 @@ class Jumbo extends Component {
     return (
       <div className="Jumbo">
 		<Jumbotron id="tron">
-		  <img src="./imgs/jumbo.png" alt="jumbo header" responsive="true" />
+		  <img src="./assets/imgs/jumbo.png" alt="jumbo header" responsive="true" />
 		</Jumbotron>
       </div>
     );

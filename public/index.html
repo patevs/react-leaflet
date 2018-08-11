@@ -19,18 +19,28 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   <!-- loading-bar CSS and JS-->
-  <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
-  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="assets/loading-bar/loading-bar.js"></script>
 
   <!-- Leaflet CSS and JS -->
   <link href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" rel="stylesheet" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
 
   <!-- Leaflet Providers JS -->
-  <script src="js/leaflet-providers.js"></script>
+  <script src="assets/leaflet-providers/leaflet-providers.js"></script>
 
   <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+
+  <!-- Leaflet Locate Control CSS and JS -->
+  <link rel="stylesheet" type="text/css" href="assets/leaflet-locate-control/L.Control.Locate.scss"/>
+  <link rel="stylesheet" type="text/css" href="assets/leaflet-locate-control/L.Control.Locate.mapbox.scss"/>
+  <script type="text/javascript" src="assets/leaflet-locate-control/L.Control.Locate.js"></script>
+
+  <!-- Font Awesome CSS and JS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
   <!-- react-leaflet JS -->
   <!--
@@ -72,14 +82,26 @@
   }).addTo(lmap);
   */
 
-  // HERE Normal Day map
+  // HERE Normal Day base map
   L.tileLayer.provider('HERE.normalDay', {
       app_id: 'lxvaUyd3XPi0cmxaKjJm',
       app_code: 'SPBZTcrVWB3CYvR3h8kk6w'
   }).addTo(lmap);
 
+  // add locate button to map
+  //L.control.locate().addTo(lmap);
+  var lc = L.control.locate({
+    position: 'topleft',
+    strings: {
+        title: "Click to move to your location"
+    },
+    drawCircle: false,
+    drawMarker: true,
+    showPopup: false
+  }).addTo(lmap);
   // attempt to locate user
-  lmap.locate({setView: true, maxZoom: 16});
+  //lmap.locate({setView: true, maxZoom: 16});
+  lc.start();
   // user is successfully located event
   function onLocationFound(e) {
     var radius = e.accuracy / 2;
@@ -140,7 +162,7 @@
     displayContent(true);
   }, 4000);
 
-    /* BLUE TRIANGLE
+  /* BLUE TRIANGLE
   var delivery_popup = "<b><span style=\"color:blue;\">Blue</span></b> triangle is<br /> the delivery zone";
   L.polygon([
     [base_lat,         base_long + 0.01],
