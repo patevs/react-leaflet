@@ -1,5 +1,5 @@
 
-# React Leaflet * [**M8Fr8**](https://patevs.github.io/react-leaflet/ "M8Fr8 Homepage")
+# React Leaflet | [**M8Fr8**](https://patevs.github.io/react-leaflet/ "M8Fr8 Homepage")
 
 [![master](https://travis-ci.org/patevs/react-leaflet.svg?branch=master)](https://travis-ci.org/patevs/react-leaflet)
 [![develop](https://travis-ci.org/patevs/react-leaflet.svg?branch=develop)](https://travis-ci.org/patevs/react-leaflet)
