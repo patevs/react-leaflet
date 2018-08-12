@@ -26,6 +26,9 @@
  * **Bootstrap 3**
     * [`react-bootstrap/react-bootstrap`](https://github.com/react-bootstrap/react-bootstrap)
     * [`react-bootstrap docs`](https://react-bootstrap.github.io/getting-started/introduction/)
+ 
+ * **Font Awesome**
+    * [`Cheatsheet`](https://fontawesome.com/cheatsheet)  
 
  * **Leaflet**
     * [`Leaflet/Leaflet`](https://github.com/Leaflet/Leaflet)
