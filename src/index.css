@@ -26,3 +26,26 @@ body {
   margin: 0 auto;
   margin-top: 350px;
 }
+
+@media(max-width:510px){
+  #mapbox {
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}
+@media(min-width:960px){
+    #mapbox {
+      /*margin: 0 auto;*/
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+}
+@media(min-width:1200px){
+    #mapbox {
+      /*margin: 0 auto;*/
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+}
+
+
