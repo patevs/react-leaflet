@@ -43,7 +43,7 @@ class MainNav extends Component {
 				    <Nav pullRight>
 				      <NavItem eventKey={1} href="#">
 				      	  <ButtonToolbar>
-						    <Button><span className="glyphicon glyphicon-log-in"></span> Login</Button>
+						    <Button id="login-btn"><span className="glyphicon glyphicon-log-in"></span> Login</Button>
 						  </ButtonToolbar>
 				      </NavItem>
 				      <NavItem eventKey={2} href="#">
@@ -65,3 +65,7 @@ class MainNav extends Component {
 }
 
 export default MainNav;
+
+/*
+
+*/
