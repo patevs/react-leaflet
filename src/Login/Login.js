@@ -14,38 +14,18 @@ class LoginPage extends Component {
     this.state = {
       username: '',
       password: '',
-      error: '',
     };
-    this.handlePassChange = this.handlePassChange.bind(this);
-    this.handleUserChange = this.handleUserChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.dismissError = this.dismissError.bind(this);
+    //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  dismissError() {
-    this.setState({ error: '' });
+  validateForm() {
+    return this.state.email.length > 0 && this.state.password.length > 0;
   }
 
-  handleSubmit(evt) {
-    evt.preventDefault();
-    if (!this.state.username) {
-      return this.setState({ error: 'Username is required' });
-    }
-    if (!this.state.password) {
-      return this.setState({ error: 'Password is required' });
-    }
-    return this.setState({ error: '' });
-  }
-  
-  handleUserChange(evt) {
-    this.setState({
-      username: evt.target.value,
-    });
-  };
-  handlePassChange(evt) {
-    this.setState({
-      password: evt.target.value,
-    });
+  handleSubmit() { }
+
+  handleChange() {
+    //event.preventDefault();
   }
 
   render() {
@@ -64,7 +44,7 @@ class LoginPage extends Component {
                   Username
                 </Col>
                 <Col sm={10}>
-                  <FormControl type="username" placeholder="Username" />
+                  <FormControl type="username" value={this.state.username} placeholder="Username" onChange={this.handleChange} />
                 </Col>
 
               </FormGroup>
@@ -74,7 +54,7 @@ class LoginPage extends Component {
                   Password
                 </Col>
                 <Col sm={10}>
-                  <FormControl type="password" placeholder="Password" />
+                  <FormControl type="password" value={this.state.password} placeholder="Password" onChange={this.handleChange} />
                 </Col>
               </FormGroup>
 

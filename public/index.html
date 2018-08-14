@@ -56,6 +56,10 @@
   
 </head>
 <body>
+<!-- Main Nav -->
+<div id="main-nav"></div>
+<!-- Jumbotron Header -->
+<div id="jumbo"></div>
 <!-- Loading Bar -->
 <div 
   id="loading-bar"
@@ -64,10 +68,6 @@
   data-preset="circle"
   data-img-size="200"
 ></div>
-<!-- Main Nav -->
-<div id="main-nav"></div>
-<!-- Jumbotron Header -->
-<div id="jumbo"></div>
 <!-- login component -->
 <div id="login"></div>
 <!-- M8Fr8 Map-->
@@ -78,6 +78,7 @@
   </div>
 
 </div>
+
 <script>
 
   /* LEAFLET MAP */
@@ -156,12 +157,12 @@
     if(boolean == true){
       jumboElem.setAttribute("style", "");
       loginElem.setAttribute("style", "");
-      //navbarElem.setAttribute("style", "");
-      //mapBoxElem.setAttribute("style", "");
+      navbarElem.setAttribute("style", "");
+      mapBoxElem.setAttribute("style", "");
       lmap.invalidateSize();
     } else {
       loginElem.setAttribute("style", "display:none");
-      jumboElem.setAttribute("style", "display:none");
+      //jumboElem.setAttribute("style", "display:none");
       navbarElem.setAttribute("style", "display:none");
       mapBoxElem.setAttribute("style", "opacity: 0;");
     }

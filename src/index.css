@@ -24,15 +24,15 @@ body {
   font-size: 24px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 42vh;
+  margin-top: 21vh;
 }
 
 #mapid {
   display: block;
   margin: 0 auto; 
-  border: 2px solid black
+  border: 2px solid black;
+  margin-bottom: 4em;
 }
-
 /*
 @media(max-width:510px){
   #mapbox {
