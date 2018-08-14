@@ -62,16 +62,19 @@
   class="ldBar label-center" 
   data-value="10"
   data-preset="circle"
+  data-img-size="200"
 ></div>
 <!-- Main Nav -->
 <div id="main-nav"></div>
 <!-- Jumbotron Header -->
 <div id="jumbo"></div>
 <!-- M8Fr8 Map-->
-<div class="container-fluid">
+<div class="container">
+  
   <div id="mapbox">
-    <div id="mapid" style="display: block; width: 100%; height: 650px; margin: 0 auto; border: 2px solid black"></div>
+    <div id="mapid" style="width: 100%; height: 70vh;"></div>
   </div>
+
 </div>
 <script>
 
@@ -115,7 +118,7 @@
   }).addTo(lmap);
   // attempt to locate user
   //lmap.locate({setView: true, maxZoom: 16});
-  lc.start();
+  //lc.start();
   // user is successfully located event
   function onLocationFound(e) {
     var radius = e.accuracy / 2;

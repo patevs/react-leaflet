@@ -11,6 +11,9 @@
 
 @media(max-width:510px){
 	#tron > img {
-	  display: none;
+		margin-top: -1em;
+		width: 100vw;
+		margin-bottom: -.5em;
+	  /*display: none;*/
 	}
 }

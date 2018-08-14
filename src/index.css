@@ -18,15 +18,22 @@ body {
 }
 
 .ldBar {
-  width: 400px;
-  height: 400px;
+  /*width: 50%;
+  height: 50%;*/
   font-weight: 900;
   font-size: 24px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 350px;
+  margin-top: 42vh;
 }
 
+#mapid {
+  display: block;
+  margin: 0 auto; 
+  border: 2px solid black
+}
+
+/*
 @media(max-width:510px){
   #mapbox {
     margin-left: .5em;
@@ -35,17 +42,17 @@ body {
 }
 @media(min-width:960px){
     #mapbox {
-      /*margin: 0 auto;*/
+      /*margin: 0 auto;
       margin-left: 20%;
       margin-right: 20%;
     }
 }
 @media(min-width:1200px){
     #mapbox {
-      /*margin: 0 auto;*/
+      /*margin: 0 auto;
       margin-left: 25%;
       margin-right: 25%;
     }
 }
-
+*/
 
