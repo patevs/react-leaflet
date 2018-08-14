@@ -12,6 +12,8 @@ import './index.css';
 
 // main nav bar
 import MainNav from './MainNav/MainNav';
+//import OffcanvasNav from './OffcanvasNav/OffcanvasNav'; 
+
 // jumbotron
 import Jumbo from './Jumbo/Jumbo';
 
@@ -22,6 +24,7 @@ library.add(faStroopwafel);
 
 // render react components
 ReactDOM.render(<MainNav />, document.getElementById('main-nav'));
+//ReactDOM.render(<OffcanvasNav />, document.getElementById('offcanvas-nav'));
 ReactDOM.render(<Jumbo />, document.getElementById('jumbo'));
 
 registerServiceWorker();
