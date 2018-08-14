@@ -11,11 +11,13 @@ import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 import './index.css';
 
 // main nav bar
+//import OffcanvasNav from './OffcanvasNav/OffcanvasNav'; 
 import MainNav from './MainNav/MainNav';
-// login form
-import Login from './Login/Login';
 // jumbotron
 import Jumbo from './Jumbo/Jumbo';
+// login form
+import Login from './Login/Login';
+
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -23,8 +25,9 @@ import registerServiceWorker from './registerServiceWorker';
 library.add(faStroopwafel);
 
 // render react components
+//ReactDOM.render(<OffcanvasNav />, document.getElementById('offcanvas-nav'));
 ReactDOM.render(<MainNav />, document.getElementById('main-nav'));
-ReactDOM.render(<Login />, document.getElementById('login'));
 ReactDOM.render(<Jumbo />, document.getElementById('jumbo'));
+ReactDOM.render(<Login />, document.getElementById('login'));
 
 registerServiceWorker();
