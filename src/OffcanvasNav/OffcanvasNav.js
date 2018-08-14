@@ -1,8 +1,6 @@
 
 // imports
 import React, { Component } from 'react';
-// off canvas nav
-import NavbarOffcanvas from 'react-bootstrap-navbar-offcanvas'
 // bootstrap
 //import { Nav, Navbar, NavItem, NavDropdown, MenuItem, ButtonToolbar, Button } from 'react-bootstrap'
 // css
