@@ -3,6 +3,7 @@
 
 [![master](https://travis-ci.org/patevs/react-leaflet.svg?branch=master)](https://travis-ci.org/patevs/react-leaflet)
 [![develop](https://travis-ci.org/patevs/react-leaflet.svg?branch=develop)](https://travis-ci.org/patevs/react-leaflet)
+[![NSP Status](https://nodesecurity.io/orgs/patevs/projects/96a8f03d-3546-41f1-888b-029edace9b8c/badge)](https://nodesecurity.io/orgs/patevs/projects/96a8f03d-3546-41f1-888b-029edace9b8c)
 
   > This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
   > You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
