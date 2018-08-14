@@ -12,6 +12,8 @@ import './index.css';
 
 // main nav bar
 import MainNav from './MainNav/MainNav';
+// login form
+import Login from './Login/Login';
 // jumbotron
 import Jumbo from './Jumbo/Jumbo';
 
@@ -22,6 +24,7 @@ library.add(faStroopwafel);
 
 // render react components
 ReactDOM.render(<MainNav />, document.getElementById('main-nav'));
+ReactDOM.render(<Login />, document.getElementById('login'));
 ReactDOM.render(<Jumbo />, document.getElementById('jumbo'));
 
 registerServiceWorker();

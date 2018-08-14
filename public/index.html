@@ -68,6 +68,8 @@
 <div id="main-nav"></div>
 <!-- Jumbotron Header -->
 <div id="jumbo"></div>
+<!-- login component -->
+<div id="login"></div>
 <!-- M8Fr8 Map-->
 <div class="container">
   
@@ -145,6 +147,7 @@
 
   // get elements
   var jumboElem = document.getElementById("jumbo");
+  var loginElem = document.getElementById("login");
   var navbarElem = document.getElementById("main-nav");
   var mapBoxElem = document.getElementById("mapbox");
 
@@ -152,10 +155,12 @@
   function displayContent(boolean){
     if(boolean == true){
       jumboElem.setAttribute("style", "");
-      navbarElem.setAttribute("style", "");
-      mapBoxElem.setAttribute("style", "");
+      loginElem.setAttribute("style", "");
+      //navbarElem.setAttribute("style", "");
+      //mapBoxElem.setAttribute("style", "");
       lmap.invalidateSize();
     } else {
+      loginElem.setAttribute("style", "display:none");
       jumboElem.setAttribute("style", "display:none");
       navbarElem.setAttribute("style", "display:none");
       mapBoxElem.setAttribute("style", "opacity: 0;");

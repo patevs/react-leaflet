@@ -1,0 +1,53 @@
+
+#login-form {
+	margin: 0 auto;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#form-groups {
+	width: 400px;
+	margin: 0 auto;
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	#form-groups {
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	#form-groups {
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 530px) {
+	#form-groups {
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	#form-groups {
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	#form-groups {
+		width: 400px;
+		margin: 0 auto;
+	}
+}
