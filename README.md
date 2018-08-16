@@ -11,16 +11,15 @@
 ## Resources
 
  * **React**
-    * [`facebook/react`](https://github.com/facebook/react)
-    * [`facebook/create-react-app`](https://github.com/facebook/create-react-app)
-    * [`facebook/react-native`](https://github.com/facebook/react-native)
-    * [`facebook/react-devtools`](https://github.com/facebook/react-devtools)
-    * [`React Docs`](https://reactjs.org/docs/hello-world.html)
-
- * **React-Providers**
-    * [`leaflet-extras/leaflet-providers`](https://github.com/leaflet-extras/leaflet-providers)
-    * [`HERE`](https://developer.here.com/documentation/maps/topics/quick-start.html)
+    * [`facebook/react`](https://github.com/facebook/react "React")
+    * [`facebook/create-react-app`](https://github.com/facebook/create-react-app "create-react-app")
+    * [`React Docs`](https://reactjs.org/docs/hello-world.html "docs")
  
+ * **React Router**
+     * [`ReactTraining/react-router`](https://github.com/ReactTraining/react-router "react-router")
+     * [`react-router-dom`](https://www.npmjs.com/package/react-router-dom "npm")
+     * [`Redirects- Auth Workflow`](https://reacttraining.com/react-router/web/example/auth-workflow "React Router")
+
  * **Sublime Text**
     * [`babel/babel-sublime`](https://github.com/babel/babel-sublime)
 
@@ -30,10 +29,14 @@
  
  * **Font Awesome**
     * [`Cheatsheet`](https://fontawesome.com/cheatsheet)  
-
+ 
  * **Leaflet**
     * [`Leaflet/Leaflet`](https://github.com/Leaflet/Leaflet)
     * [`PaulLeCam/react-leaflet`](https://github.com/PaulLeCam/react-leaflet)
+
+ * **Leaflet-Providers**
+    * [`leaflet-extras/leaflet-providers`](https://github.com/leaflet-extras/leaflet-providers)
+    * [`HERE`](https://developer.here.com/documentation/maps/topics/quick-start.html)
 
 ## Folder Structure
 
