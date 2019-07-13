@@ -35,12 +35,12 @@ class LoginPage extends Component {
     return (
       <div className="Login">
         <div id="login-form">
-          <Form horizontal>
+          <Form horizontal="true">
 
             <div id="form-groups">
               <FormGroup controlId="formHorizontalEmail">
 
-                <Col componentClass={ControlLabel} sm={2}>
+                <Col componentclass={ControlLabel} sm={2}>
                   Username
                 </Col>
                 <Col sm={10}>
@@ -50,7 +50,7 @@ class LoginPage extends Component {
               </FormGroup>
 
               <FormGroup controlId="formHorizontalPassword">
-                <Col componentClass={ControlLabel} sm={2}>
+                <Col componentclass={ControlLabel} sm={2}>
                   Password
                 </Col>
                 <Col sm={10}>
@@ -59,14 +59,8 @@ class LoginPage extends Component {
               </FormGroup>
 
               <FormGroup>
-                <Col smOffset={2} sm={10}>
-                  <Checkbox>Remember me</Checkbox>
-                </Col>
-              </FormGroup>  
-
-              <FormGroup>
-                <Col smOffset={2} sm={10}>
-                  <Button bsStyle="primary" type="submit">Sign in</Button>
+                <Col smoffset={2} sm={10}>
+                  <Button bsstyle="primary" type="submit">Sign in</Button>
                 </Col>
               </FormGroup>
             </div>
@@ -79,3 +73,11 @@ class LoginPage extends Component {
 }
 
 export default LoginPage;
+
+/*
+              <FormGroup>
+                <Col smoffset={2} sm={10}>
+                  <Checkbox>Remember me</Checkbox>
+                </Col>
+              </FormGroup>
+*/
