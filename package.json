@@ -4,15 +4,15 @@
   "private": true,
   "homepage": "https://patevs.github.io/react-leaflet",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.2",
-    "@fortawesome/free-solid-svg-icons": "^5.2.0",
-    "@fortawesome/react-fontawesome": "^0.1.1",
-    "leaflet": "^1.3.3",
-    "leaflet.locatecontrol": "^0.67.0",
-    "react": "^16.4.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "leaflet": "^1.6.0",
+    "leaflet.locatecontrol": "^0.68.0",
+    "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.9",
-    "react-dom": "^16.4.2",
-    "react-scripts": "^3.0.1"
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,6 +23,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.1.1"
   }
 }
