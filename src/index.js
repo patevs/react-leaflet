@@ -12,7 +12,7 @@ import './index.css';
 
 // main nav bar
 //import OffcanvasNav from './OffcanvasNav/OffcanvasNav'; 
-import MainNav from './MainNav/MainNav';
+// import MainNav from './MainNav/MainNav';
 // jumbotron
 import Jumbo from './Jumbo/Jumbo';
 // login form
@@ -26,7 +26,7 @@ library.add(faStroopwafel);
 
 // render react components
 //ReactDOM.render(<OffcanvasNav />, document.getElementById('offcanvas-nav'));
-ReactDOM.render(<MainNav />, document.getElementById('main-nav'));
+// ReactDOM.render(<MainNav />, document.getElementById('main-nav'));
 ReactDOM.render(<Jumbo />, document.getElementById('jumbo'));
 ReactDOM.render(<Login />, document.getElementById('login'));
 
