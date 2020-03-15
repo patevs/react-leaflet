@@ -2,7 +2,9 @@
 // imports
 import React, { Component } from 'react';
 
-import { Form, FormGroup, Col, ControlLabel, Checkbox, Button, FormControl } from 'react-bootstrap'
+// import { Form, FormGroup, Col, ControlLabel, Checkbox, Button, FormControl } from 'react-bootstrap'
+import { Form, FormGroup, Col, FormLabel, Checkbox, Button, FormControl } from 'react-bootstrap'
+
 
 import './Login.css';
 
@@ -40,7 +42,7 @@ class LoginPage extends Component {
             <div id="form-groups">
               <FormGroup controlId="formHorizontalEmail">
 
-                <Col componentclass={ControlLabel} sm={2}>
+                <Col componentclass={FormLabel} sm={2}>
                   Username
                 </Col>
                 <Col sm={10}>
@@ -50,7 +52,7 @@ class LoginPage extends Component {
               </FormGroup>
 
               <FormGroup controlId="formHorizontalPassword">
-                <Col componentclass={ControlLabel} sm={2}>
+                <Col componentclass={FormLabel} sm={2}>
                   Password
                 </Col>
                 <Col sm={10}>
