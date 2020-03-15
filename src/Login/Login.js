@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 
 // import { Form, FormGroup, Col, ControlLabel, Checkbox, Button, FormControl } from 'react-bootstrap'
-import { Form, FormGroup, Col, FormLabel, Checkbox, Button, FormControl } from 'react-bootstrap'
+import { Form, FormGroup, Col, FormLabel, Button, FormControl } from 'react-bootstrap'
 
 
 import './Login.css';
