@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //NavbarHeader
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem, ButtonToolbar, Button } from 'react-bootstrap'
+import { Nav, Navbar, NavItem, NavDropdown, Dropdown, ButtonToolbar, Button } from 'react-bootstrap'
 
 import './MainNav.css';
 
@@ -32,11 +32,11 @@ class MainNav extends Component {
 										About
 									</NavItem>
 									<NavDropdown eventKey={3} title="Resources" id="basic-nav-dropdown">
-										<MenuItem eventKey={3.1}>Action</MenuItem>
-										<MenuItem eventKey={3.2}>Another action</MenuItem>
-										<MenuItem eventKey={3.3}>Something else here</MenuItem>
-										<MenuItem divider />
-										<MenuItem eventKey={3.3}>Separated link</MenuItem>
+										<Dropdown.Item eventKey={3.1}>Action</Dropdown.Item>
+										<Dropdown.Item eventKey={3.2}>Another action</Dropdown.Item>
+										<Dropdown.Item eventKey={3.3}>Something else here</Dropdown.Item>
+										<Dropdown.Item divider />
+										<Dropdown.Item eventKey={3.3}>Separated link</Dropdown.Item>
 									</NavDropdown>
 								</Nav>
 
