@@ -3,6 +3,9 @@
   "version": "0.2.1",
   "private": true,
   "homepage": "https://patevs.github.io/react-leaflet",
+  "engines": {
+    "node": ">=10"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.27",
     "@fortawesome/free-solid-svg-icons": "5.12.1",
